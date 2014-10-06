@@ -1,0 +1,41 @@
+# OASIS_START
+# DO NOT EDIT (digest: d5ea08d6c943990c375e15b38fbefd1c)
+# Ignore VCS directories, you can use the same kind of rule outside
+# OASIS_START/STOP if you want to exclude directories that contains
+# useless stuff for the build process
+<**/.svn>: -traverse
+<**/.svn>: not_hygienic
+".bzr": -traverse
+".bzr": not_hygienic
+".hg": -traverse
+".hg": not_hygienic
+".git": -traverse
+".git": not_hygienic
+"_darcs": -traverse
+"_darcs": not_hygienic
+# Library vcard
+"src/vcard.cmxs": use_vcard
+"src/lexer.cmx": for-pack(Vcard)
+"src/parser.cmx": for-pack(Vcard)
+"src/printer.cmx": for-pack(Vcard)
+"src/syntax.cmx": for-pack(Vcard)
+"src/vcard_4_0.cmx": for-pack(Vcard)
+# Executable test
+"src/test.native": pkg_camomile
+"src/test.native": pkg_core
+"src/test.native": pkg_menhirLib
+"src/test.native": pkg_re2
+"src/test.native": pkg_ulex
+"src/test.native": use_vcard
+<src/*.ml{,i}>: pkg_camomile
+<src/*.ml{,i}>: pkg_core
+<src/*.ml{,i}>: pkg_menhirLib
+<src/*.ml{,i}>: pkg_re2
+<src/*.ml{,i}>: pkg_ulex
+<src/*.ml{,i}>: use_vcard
+# OASIS_STOP
+
+true: use_ocamlfind, use_menhir, annot
+<**/lexer.ml>: syntax_camlp4o
+"src/test.native": thread
+<src/*.ml{,i}>: thread

@@ -1,0 +1,25 @@
+opam-version: "1"
+name: "${name}"
+version: "${version}"
+maintainer: "dominic.price@nottingham.ac.uk"
+homepage: "${homepage}"
+authors: [ "${authors}" ]
+license: "${license}"
+ocaml-version: [ >= "4.01.0" ]
+build: [
+  ["oasis" "setup"]
+  ["./configure" "--prefix" prefix]
+  [make "build"]
+  [make "install"]
+]
+remove: [
+  [make "uninstall"]
+  ["ocamlfind" "remove" "${library(vcard).findlibname}"]
+]
+depends: [
+  "core"
+  "menhir"
+  "ulex"
+  "re2"
+  "camomile"
+]
