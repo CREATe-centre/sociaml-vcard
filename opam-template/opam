@@ -17,6 +17,7 @@ remove: [
   ["ocamlfind" "remove" "${library(vcard).findlibname}"]
 ]
 depends: [
+  "oasis"
   "core"
   "menhir"
   "ulex"
