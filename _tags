@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: a1285f0a842f3c3b22a2a738c508aef7)
+# DO NOT EDIT (digest: d7244a570088b0ec40844989e91e2acf)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
@@ -22,7 +22,7 @@ true: annot, bin_annot
 "src/syntax.cmx": for-pack(Sociaml_vcard)
 "src/vcard_4_0.cmx": for-pack(Sociaml_vcard)
 <src/*.ml{,i,y}>: pkg_camomile
-<src/*.ml{,i,y}>: pkg_core
+<src/*.ml{,i,y}>: pkg_core_kernel
 <src/*.ml{,i,y}>: pkg_menhirLib
 <src/*.ml{,i,y}>: pkg_re2
 <src/*.ml{,i,y}>: pkg_ulex

@@ -1,6 +1,6 @@
 OASISFormat: 0.4
 Name:        sociaml-vcard
-Version:     0.2.0
+Version:     0.2.1
 Synopsis:    vCard library for OCaml
 Description:
   Library for parsing and creating contact information in the vCard format.
@@ -20,7 +20,7 @@ Library sociaml_vcard
   Pack:           true
   BuildDepends:
     camomile,
-    core,
+    core_kernel,
     menhirLib,
     re2,
     ulex

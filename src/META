@@ -1,8 +1,8 @@
 # OASIS_START
-# DO NOT EDIT (digest: 5208024044fafdda202317cded0cbc74)
-version = "0.2.0"
+# DO NOT EDIT (digest: 16c2ceecca4a830f117522a26fc0504c)
+version = "0.2.1"
 description = "vCard library for OCaml"
-requires = "camomile core menhirLib re2 ulex"
+requires = "camomile core_kernel menhirLib re2 ulex"
 archive(byte) = "sociaml_vcard.cma"
 archive(byte, plugin) = "sociaml_vcard.cma"
 archive(native) = "sociaml_vcard.cmxa"
