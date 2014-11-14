@@ -1,6 +1,6 @@
 OASISFormat: 0.4
 Name:        sociaml-vcard
-Version:     0.1.0
+Version:     0.2.0
 Synopsis:    vCard library for OCaml
 Description:
   Library for parsing and creating contact information in the vCard format.
@@ -8,14 +8,14 @@ Description:
 Authors:     Dominic Price
 Copyrights:  (C) 2014 Horizon Digital Economy Research
 LicenseFile: LICENSE
-License:     ISC
+License:     GPL-3
 Homepage:    https://github.com/dominicjprice/sociaml-vcard
 Plugins:     META (0.4), DevFiles (0.4)
 BuildTools:  ocamlbuild, ocamldoc, make, awk
 
-Library vcard
+Library sociaml_vcard
   Path:           src
-  Findlibname:    sociaml-vcard
+  Findlibname:    sociaml_vcard
   Modules:        Lexer, Parser, Printer, Syntax, Vcard_4_0
   Pack:           true
   BuildDepends:
@@ -25,7 +25,7 @@ Library vcard
     re2,
     ulex
   
-Document vcard
+Document sociaml_vcard
   Type:           ocamlbuild (0.1.0)
   Title:          sociaml-vcard Reference
   Authors:        Dominic Price
@@ -35,7 +35,7 @@ Document vcard
   XOCamlbuildPath: 
     src
   XOCamlbuildLibraries:
-    sociaml-vcard
+    sociaml_vcard
 
 SourceRepository head
   Type:           git

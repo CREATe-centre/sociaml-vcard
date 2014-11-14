@@ -1,8 +1,9 @@
 # OASIS_START
-# DO NOT EDIT (digest: a9603842b2d68d5893476ac2b483dd1b)
+# DO NOT EDIT (digest: a1285f0a842f3c3b22a2a738c508aef7)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
+true: annot, bin_annot
 <**/.svn>: -traverse
 <**/.svn>: not_hygienic
 ".bzr": -traverse
@@ -13,21 +14,19 @@
 ".git": not_hygienic
 "_darcs": -traverse
 "_darcs": not_hygienic
-# Library vcard
-"src/vcard.cmxs": use_vcard
-"src/lexer.cmx": for-pack(Vcard)
-"src/parser.cmx": for-pack(Vcard)
-"src/printer.cmx": for-pack(Vcard)
-"src/syntax.cmx": for-pack(Vcard)
-"src/vcard_4_0.cmx": for-pack(Vcard)
-<src/*.ml{,i}>: pkg_camomile
-<src/*.ml{,i}>: pkg_core
-<src/*.ml{,i}>: pkg_menhirLib
-<src/*.ml{,i}>: pkg_re2
-<src/*.ml{,i}>: pkg_ulex
+# Library sociaml_vcard
+"src/sociaml_vcard.cmxs": use_sociaml_vcard
+"src/lexer.cmx": for-pack(Sociaml_vcard)
+"src/parser.cmx": for-pack(Sociaml_vcard)
+"src/printer.cmx": for-pack(Sociaml_vcard)
+"src/syntax.cmx": for-pack(Sociaml_vcard)
+"src/vcard_4_0.cmx": for-pack(Sociaml_vcard)
+<src/*.ml{,i,y}>: pkg_camomile
+<src/*.ml{,i,y}>: pkg_core
+<src/*.ml{,i,y}>: pkg_menhirLib
+<src/*.ml{,i,y}>: pkg_re2
+<src/*.ml{,i,y}>: pkg_ulex
 # OASIS_STOP
-
-true: use_ocamlfind, use_menhir, annot
+true: use_menhir, annot
 <**/lexer.ml>: syntax_camlp4o
-"src/test.native": thread
-<src/*.ml{,i}>: thread
+<src/*.ml{,i,y}>: thread

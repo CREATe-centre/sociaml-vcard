@@ -14,7 +14,7 @@ build: [
 ]
 remove: [
   [make "uninstall"]
-  ["ocamlfind" "remove" "${library(vcard).findlibname}"]
+  ["ocamlfind" "remove" "${library(sociaml_vcard).findlibname}"]
 ]
 depends: [
   "oasis"
