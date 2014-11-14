@@ -1,7 +1,7 @@
 open Vcard_4_0
 
 let escape_value value =
-  let open Core.Std in
+  let open Core_kernel.Std in
   value |> String.substr_replace_all ~pattern:"\\" ~with_:"\\\\" |> 
   String.substr_replace_all ~pattern:"\n" ~with_:"\\n" |> 
   String.substr_replace_all ~pattern:"," ~with_:"\\,"

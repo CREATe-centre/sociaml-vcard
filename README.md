@@ -10,7 +10,7 @@ open Vcard
 open Ulexing
 open Syntax
           
-module R = Core.Result
+module R = Core_kernel.Result
                 
 let () =  
   match open_in_bin "contacts.vcf" |> Stream.of_channel |> Lexer.parse with 

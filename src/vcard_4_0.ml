@@ -1,4 +1,4 @@
-module R = Core.Result
+module R = Core_kernel.Result
 
 type error =
   | InvalidCharacters

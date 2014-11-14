@@ -1,7 +1,7 @@
 open Parser
 open Ulexing
 
-module R = Core.Result
+module R = Core_kernel.Result
 
 let regexp newline = "\r\n"
 
